@@ -1,0 +1,210 @@
+/* Fonts */
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Thin.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Thin.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Thin.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Thin.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Thin.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-ExtraLight.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-ExtraLight.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-ExtraLight.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-ExtraLight.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Light.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Light.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Light.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Light.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Regular.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Regular.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Regular.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Medium.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Medium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Medium.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Medium.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-SemiBold.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-SemiBold.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-SemiBold.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Bold.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Bold.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Bold.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-ExtraBold.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-ExtraBold.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-ExtraBold.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Black.eot');
+    src: url('assets/fonts/MuseoModerno/eot/MuseoModerno-Black.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MuseoModerno/woff2/MuseoModerno-Black.woff2') format('woff2'),
+    url('assets/fonts/MuseoModerno/woff/MuseoModerno-Black.woff') format('woff'),
+    url('assets/fonts/MuseoModerno/ttf/MuseoModerno-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
+}
+
+/* General */
+:root {
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #363636;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #363636;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1CBAE9;
+}
+
+body {
+    height: 2500px;
+    background-color: #EEEEEE;
+}
+
+a {
+    color: #363636;
+}
+
+a:active {
+    color: #BBACAC;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* Header -> Navbar */
+.header {
+    background-color: white;
+    height: 5.5rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #EF827F;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    box-sizing: content-box;
+}
+
+#header-logo {
+    height: 5.5rem;
+    width: 5.5rem;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.navbar {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+.navbar-nav {
+    list-style: none;
+    text-decoration-line: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 5.5rem;
+}
+
+.nav-item {
+    margin-bottom: 6px;
+}
+
+.separator {
+    width: 1px;
+    height: 9px;
+    margin: auto 18px auto 18px;
+}
+
+.telephone {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.nav-item:nth-last-child(2) {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.nav-item:last-child {
+    position: absolute;
+    top: 16px;
+    left: 72%;
+    /*display: none;*/
+}
+
+.nav-item>a {
+    text-decoration: none;
+}
+
+/* Main Page */
+.main {
+    margin-top: 5.5rem;
+    padding: 1rem;
+}
+

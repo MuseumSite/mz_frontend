@@ -1,9 +1,13 @@
 import React from "react"
+import {Navbar} from "../components/Navbar";
 
 export const ContactPage = () => {
     return (
         <div>
-            <h1>Contact Page</h1>
+            <Navbar/>
+            <section className="main">
+                <h1>Contacts Page</h1>
+            </section>
         </div>
     )
 }

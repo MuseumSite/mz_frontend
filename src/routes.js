@@ -6,6 +6,8 @@ import {ExhibitionsPage} from "./pages/events/ExhibitionsPage";
 import {QuestsPage} from "./pages/events/QuestsPage";
 import {LessonsPage} from "./pages/events/LessonsPage";
 import {GuidedToursPage} from "./pages/events/GuidedToursPage";
+import {NewsPage} from "./pages/NewsPage";
+import {ContactPage} from "./pages/ContactPage";
 
 export const useRoutes = () => {
     return (
@@ -17,7 +19,7 @@ export const useRoutes = () => {
                 <AboutPage/>
             </Route>
             <Route path="/news" exact>
-                <MainPage/>
+                <NewsPage/>
             </Route>
             <Route path="/events/exhibitions" exact>
                 <ExhibitionsPage/>
@@ -30,6 +32,9 @@ export const useRoutes = () => {
             </Route>
             <Route path="/events/quests" exact>
                 <QuestsPage/>
+            </Route>
+            <Route path="/contacts" exact>
+                <ContactPage/>
             </Route>
             <Redirect to="/home" exact/>
         </Switch>
