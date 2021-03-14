@@ -1,21 +1,21 @@
 import React from "react"
-import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom"
 import logo from "../assets/img/Logo.png"
 import separator from "../assets/img/Separator.png"
 
-export const Navbar = () => {
+export const Header = () => {
 
     return (
         <header className="header">
             <nav className="navbar">
-                <ul className="navbar-nav">
+                <ul className="navbar-nav container">
 
-                    <li >
+                    <li>
                         <NavLink to="/home" id="header-logo">
                             <img src={logo} alt="logo"/>
                         </NavLink>
                     </li>
-                    
+
                     <li className="nav-item">
                         <NavLink to="/about">
                             <span>О музее</span>
@@ -30,15 +30,38 @@ export const Navbar = () => {
                         </NavLink>
                     </li>
 
-                    <li className="nav-item">
-                        <NavLink to="/">
-                            <span>События</span>
-                            <img src={separator} alt="" className="separator"/>
+                    <li className="nav-item events">
+                        <NavLink to="/events">
+                            <span className="events-hover">События</span>
                         </NavLink>
+
+                        <ul className="navbar-nav-events">
+                            <li className="nav-item-events">
+                                <NavLink to="/events/exhibitions">
+                                    <span>Выставки</span>
+                                </NavLink>
+                            </li>
+                            <li className="nav-item-events">
+                                <NavLink to="/events/guided_tours">
+                                    <span>Экскурсии</span>
+                                </NavLink>
+                            </li>
+                            <li className="nav-item-events">
+                                <NavLink to="/events/lessons">
+                                    <span>Занятия</span>
+                                </NavLink>
+                            </li>
+                            <li className="nav-item-events">
+                                <NavLink to="/events/quests">
+                                    <span>Квесты</span>
+                                </NavLink>
+                            </li>
+                        </ul>
                     </li>
 
                     <li className="nav-item">
                         <NavLink to="/contacts">
+                            <img src={separator} alt="" className="separator"/>
                             <span>Контакты</span>
                         </NavLink>
                     </li>
@@ -49,7 +72,8 @@ export const Navbar = () => {
                             <img src={separator} alt="" className="separator"/>
                         </a>
                     </li>
-                    
+
+
                 </ul>
             </nav>
         </header>

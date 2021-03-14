@@ -1,10 +1,10 @@
 import React from "react"
-import {Navbar} from "../components/Navbar";
+import {Header} from "../components/Header";
 
 export const NewsPage = () => {
     return (
         <div>
-            <Navbar/>
+            <Header/>
             <section className="main">
                 <h1>News Page</h1>
             </section>

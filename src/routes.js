@@ -8,6 +8,7 @@ import {LessonsPage} from "./pages/events/LessonsPage";
 import {GuidedToursPage} from "./pages/events/GuidedToursPage";
 import {NewsPage} from "./pages/NewsPage";
 import {ContactPage} from "./pages/ContactPage";
+import {EventsPage} from "./pages/EventsPage";
 
 export const useRoutes = () => {
     return (
@@ -20,6 +21,9 @@ export const useRoutes = () => {
             </Route>
             <Route path="/news" exact>
                 <NewsPage/>
+            </Route>
+            <Route path="/events" exact>
+                <EventsPage/>
             </Route>
             <Route path="/events/exhibitions" exact>
                 <ExhibitionsPage/>
