@@ -1,8 +1,11 @@
 import React from "react"
+import {NavLink} from "react-router-dom"
 
-export const ButtonMain = () => {
+export const ButtonMain = ({textBtn}) => {
 
     return (
-        <div></div>
+        <NavLink to="/about" id="btn-about">
+            {textBtn}
+        </NavLink>
     )
 }

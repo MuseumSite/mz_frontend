@@ -6,7 +6,7 @@ import separator from "../assets/img/Separator.png"
 export const Header = () => {
 
     return (
-        <header className="header">
+        <header>
             <nav className="navbar">
                 <ul className="navbar-nav container">
 
