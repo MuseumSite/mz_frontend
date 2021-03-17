@@ -69,7 +69,7 @@ export const Header = () => {
                     <li className="nav-item telephone">
                         <a href="tel: +7(383)200-03-71">
                             <span>+7 (383) 200-03-71</span>
-                            <img src={separator} alt="" className="separator"/>
+                            {/*<img src={separator} alt="" className="separator"/>*/}
                         </a>
                     </li>
 

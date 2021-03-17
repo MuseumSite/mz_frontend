@@ -254,14 +254,7 @@ header {
     overflow: hidden;
 }
 
-.slider-wrapper {
-    position: relative;
-    width: 1200px;
-    height: 480px;
-}
-
 .image {
-    /*position: absolute;*/
     width: 1200px;
     height: 480px;
     object-fit: cover;
@@ -282,6 +275,12 @@ header {
     outline: none;
 }
 
+.nav-prev, .nav-next {
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+
 .owl-next:hover, .owl-prev:hover {
     color: white;
 }
@@ -293,13 +292,6 @@ header {
 .owl-prev {
     left: 300px;
 }
-
-.nav-prev, .nav-next {
-    display: block;
-    width: 34px;
-    height: 34px;
-}
-
 
 .owl-item {
     width: 1200px;
@@ -322,9 +314,31 @@ header {
     font-size: 16px;
 }
 
+.carousel-block-btn-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 16px;
+    margin-right: 25px;
+    height: 34px !important;
+}
+
+.carousel-block-wrapper .btn-text {
+    padding: 13px 17px 13px 17px;
+    font-size: 11px;
+    line-height: 71%;
+}
+
+.carousel-block-wrapper .btn-svg {
+    margin: 12px 6px 12px 6px;
+    height: 8.8px;
+    width: 8.8px;
+}
 
 .carousel-block-wrapper {
+    height: inherit;
     padding: 18px;
+    position: relative;
 }
 
 .carousel-block-title {
@@ -345,7 +359,7 @@ header {
 
 /* About */
 
-.about-block {
+.about-block-wrapper {
     background: white;
     height: 400px;
     width: 100%;
@@ -358,7 +372,7 @@ header {
 
 .about-content p {
     font-size: 18px;
-    margin: 44px;
+    margin: 44px 0 44px 0;
 }
 
 .about-content h1 {
@@ -366,16 +380,114 @@ header {
     margin: 0 auto;
 }
 
-#btn-about {
+.btn-text {
     background-color: #363636;
-    color: white;
+    color: #E4E4E4;
+    padding: 10px 31px 11px 29px;
+    font-weight: 600;
+}
+
+.btn-right-arrow {
+    background-color: #474747;
+}
+
+.btn-wrapper {
+    display: inline-flex;
     height: 46px;
-    width: 128px;
+}
+
+.btn-svg {
+    margin: 17px 9px 17px 9px;
 }
 
 /* News */
 
+.news-block-wrapper {
+    background-color: #EEEEEE;
+}
+
+.news-block-title {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: white;
+    padding: 6px 16px 6px 16px;
+    display: inline-flex;
+    margin: 44px 0 44px 0;
+}
+
+.news-block {
+    height: 300px;
+    background-color: white;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.news-block-image {
+    width: 400px;
+    overflow: hidden;
+}
+
+.news-block-content {
+    position: relative;
+    display: block;
+    width: 540px;
+    padding: 26px 50px 0 38px;
+}
+
+.news-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    background-position: center;
+    border: none;
+    box-shadow: none;
+}
+
+.news-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 139%;
+    margin-bottom: 14px;
+
+}
+
+.news-item-description, .news-item-date {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.news-item-date {
+    line-height: 100%;
+}
+
+.group-share-date {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 16px;
+    right: 16px;
+}
+
+.news-share {
+    margin-left: 16px;
+}
+
 /* Map */
+
+.map-block-wrapper {
+    height: 200px;
+    background-color: white;
+}
+
+.map-block-title {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: white;
+    line-height: 139%;
+    display: inline-flex;
+    margin: 44px 0 44px 0;
+    width: 300px;
+}
 
 /* Footer */
 
@@ -403,7 +515,7 @@ footer {
     align-items: center;
 }
 
-.social-nav-items>a {
+.social-nav-items > a {
     height: 30px;
 }
 
@@ -427,15 +539,59 @@ footer {
     outline: none;
 }
 
-#footer-input::-webkit-input-placeholder {
-    color: rgba(255,255,255,0.5);
+.footer-input-wrapper {
+    height: 45px;
 }
+
+.btn-right-arrow-input {
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-svg-input {
+    margin: 15px 9px 16px 9px;
+}
+
+#footer-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 #footer-input::-moz-placeholder {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .separator-footer {
     width: 2px;
     height: 40px;
     margin: auto 18px auto 18px;
+}
+
+.footer-links-ul {
+    color: rgba(255, 255, 255, 0.5);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+/* Page in development */
+
+.development-text-wrapper {
+    text-align: center;
+    color: #363636;
+    height: 50vh;
+}
+
+.development-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.development-text-wrapper footer {
+    position: absolute;
+    bottom: 0;
 }
