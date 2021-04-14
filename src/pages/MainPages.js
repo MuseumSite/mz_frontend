@@ -7,7 +7,6 @@ import {ButtonMain} from "../components/ButtonMain";
 import {NewsBlock} from "../components/news/NewsBlock";
 import {NewsData} from "../components/news/NewsData";
 
-
 export const MainPage = () => {
     const length = NewsData.length;
 
@@ -37,6 +36,7 @@ export const MainPage = () => {
                             title={newsItem.title}
                             description={newsItem.description}
                             date={newsItem.date}
+                            key={index}
                         />
                     )
                 })}
@@ -45,7 +45,6 @@ export const MainPage = () => {
             <section className="map-block-wrapper">
                 <div className="container-second">
                     <div className="map-block-title">Интерактивная карта Заельцовского района</div>
-
                 </div>
             </section>
 
@@ -54,3 +53,4 @@ export const MainPage = () => {
         </>
     )
 }
+

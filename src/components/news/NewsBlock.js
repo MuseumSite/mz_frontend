@@ -20,3 +20,4 @@ export const NewsBlock = ({img, title, description, date}) => {
         </div>
     )
 }
+

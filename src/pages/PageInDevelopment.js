@@ -12,7 +12,7 @@ export const PageInDevelopment = () => {
                 </div>
                 <Footer/>
             </section>
-
         </div>
     )
 }
+

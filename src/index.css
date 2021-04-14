@@ -475,7 +475,7 @@ header {
 /* Map */
 
 .map-block-wrapper {
-    height: 200px;
+    /*height: 200px;*/
     background-color: white;
 }
 
@@ -522,7 +522,7 @@ footer {
 .social-nav-items-text {
     flex-grow: 2;
     justify-content: center;
-    color: #EEEEEE;
+    color: white;
     font-weight: 700;
     font-size: 18px;
 }
@@ -568,12 +568,64 @@ footer {
     margin: auto 18px auto 18px;
 }
 
-.footer-links-ul {
+.footer-links {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.footer-links-wrapper {
+    display: flex;
+
+}
+
+.footer-links-first-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 154px;
+    width: 65%;
+}
+
+.footer-links-second-block {
+    color: white;
+    font-size: 14px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.footer-links-contacts {
+    width: 220px;
+    text-align: center;
+}
+
+.footer-links-logo > img {
+    margin: 22px 24px 22px 45px;
+}
+
+.footer-links-contacts > p > span {
+    font-weight: 700;
+}
+
+.contact-us {
+    display: inline-flex;
+    margin-bottom: 42px;
+}
+
+.footer-item > a, .contact-us > a {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links-ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    width: 65%;
+
 }
 
 /* Page in development */
@@ -594,4 +646,9 @@ footer {
 .development-text-wrapper footer {
     position: absolute;
     bottom: 0;
+}
+
+#map {
+    height: 500px;
+    width: 700px;
 }

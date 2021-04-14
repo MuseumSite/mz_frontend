@@ -15,6 +15,6 @@ export const ButtonMain = ({textBtn, link, classNew = ""}) => {
                 </svg>
             </div>
         </NavLink>
-
     )
 }
+

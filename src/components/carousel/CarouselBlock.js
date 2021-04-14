@@ -18,3 +18,4 @@ export const CarouselBlock = ({title, date, description}) => {
         </div>
     )
 }
+

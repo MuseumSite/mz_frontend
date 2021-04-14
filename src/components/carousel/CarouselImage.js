@@ -4,7 +4,6 @@ import {CarouselBlock} from "./CarouselBlock"
 
 import 'owl.carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'animate.css'
 
 export const CarouselImage = ({slides}) => {
 
@@ -64,3 +63,4 @@ export const CarouselImage = ({slides}) => {
         </section>
     )
 }
+
