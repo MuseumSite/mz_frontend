@@ -14,20 +14,13 @@ export const NewsPage = () => {
     }, [error, message, clearError])
 
     const authData = {
-        email: 'pa@mail.ru',
+        email: 'pdamailvghvnu',
         password: 'ad4123asd'
     }
     
     const newsHandler = async () => {
         try {
-            // const data = await request('http://localhost:5000/api/auth/register', 'POST', authData)
-            const data = await fetch('http://localhost:5000/api/auth/register', {
-                method: 'post',
-                body: JSON.stringify({email: 'max@test.com', password: '12345'}),
-                headers: {
-                    'content-type': 'application/json',
-                }
-            })
+            const data = await request('http://127.0.0.1:5000/api/auth/register', 'POST', authData)
             console.log("Data ", data)
         } catch (e) {}
     }
@@ -48,4 +41,3 @@ export const NewsPage = () => {
         // <PageInDevelopment/>
     )
 }
-

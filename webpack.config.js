@@ -16,7 +16,7 @@ module.exports = {
         open: true,
         compress: true,
         hot: true,
-        port: 3000,
+        port: 8080,
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -25,6 +25,11 @@ module.exports = {
             template: path.resolve(__dirname, './public/index.html'),
             filename: 'index.html',
             inject: true
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            }
         }),
         new webpack.ProvidePlugin({
             '$': "jquery",

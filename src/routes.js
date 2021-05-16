@@ -1,14 +1,14 @@
 import React from "react"
 import {Switch, Route, Redirect} from "react-router-dom"
-import {MainPage} from "./pages/MainPages";
-import {AboutPage} from "./pages/AboutPage";
-import {ExhibitionsPage} from "./pages/events/ExhibitionsPage";
-import {QuestsPage} from "./pages/events/QuestsPage";
-import {LessonsPage} from "./pages/events/LessonsPage";
-import {GuidedToursPage} from "./pages/events/GuidedToursPage";
-import {NewsPage} from "./pages/NewsPage";
-import {ContactPage} from "./pages/ContactPage";
-import {EventsPage} from "./pages/EventsPage";
+import {MainPage} from "./pages/MainPages"
+import {AboutPage} from "./pages/AboutPage"
+import {ExhibitionsPage} from "./pages/events/ExhibitionsPage"
+import {QuestsPage} from "./pages/events/QuestsPage"
+import {LessonsPage} from "./pages/events/LessonsPage"
+import {GuidedToursPage} from "./pages/events/GuidedToursPage"
+import {NewsPage} from "./pages/NewsPage"
+import {ContactPage} from "./pages/ContactPage"
+import {EventsPage} from "./pages/EventsPage"
 
 export const useRoutes = () => {
     return (
