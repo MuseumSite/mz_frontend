@@ -1,15 +1,17 @@
 import React from "react"
-import {Header} from "../components/Header";
-import {PageInDevelopment} from "./PageInDevelopment";
+import PageInDevelopment from "./PageInDevelopment"
+import Footer from "../components/Footer";
 
-export const EventsPage = () => {
+function EventsPage() {
     return (
         // <div>
-        //     <Header/>
         //     <section className="main">
         //         <h1>Events Page</h1>
         //     </section>
+        //     <Footer/>
         // </div>
         <PageInDevelopment/>
     )
 }
+
+export default EventsPage

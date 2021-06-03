@@ -1,11 +1,10 @@
 import React from "react"
-import {Header} from "../components/Header";
-import {Footer} from "../components/Footer";
+import Footer from "../components/Footer";
 
-export const PageInDevelopment = () => {
+function PageInDevelopment() {
     return (
         <div>
-            <Header/>
+            {/*<Header/>*/}
             <section className="development-text-wrapper">
                 <div className="main development-text">
                     <h1>Страница находится в разработке</h1>
@@ -16,3 +15,4 @@ export const PageInDevelopment = () => {
     )
 }
 
+export default PageInDevelopment

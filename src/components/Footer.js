@@ -8,7 +8,7 @@ import Facebook from "../assets/iconSvg/Facebook.svg"
 import separator from "../assets/img/Separator-footer.png"
 import FooterLogo from "../assets/img/Footer-logo.png"
 
-export const Footer = () => {
+function Footer() {
 
     return (
         <footer>
@@ -132,3 +132,5 @@ export const Footer = () => {
         </footer>
     )
 }
+
+export default Footer

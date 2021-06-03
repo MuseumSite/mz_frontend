@@ -1,11 +1,9 @@
 import React from "react"
-import {Header} from "../components/Header";
-import {PageInDevelopment} from "./PageInDevelopment";
+import PageInDevelopment from "./PageInDevelopment"
 
-export const ContactPage = () => {
+function ContactPage() {
     return (
         // <div>
-        //     <Header/>
         //     <section className="main">
         //         <h1>Contacts Page</h1>
         //     </section>
@@ -13,3 +11,5 @@ export const ContactPage = () => {
         <PageInDevelopment/>
     )
 }
+
+export default ContactPage

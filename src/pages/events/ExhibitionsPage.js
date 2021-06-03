@@ -1,15 +1,15 @@
 import React from "react"
-import {Header} from "../../components/Header";
-import {PageInDevelopment} from "../PageInDevelopment";
+import PageInDevelopment from "../PageInDevelopment"
 
-export const ExhibitionsPage = () => {
+function ExhibitionsPage() {
     return (
-        // <div>
-        //     <Header/>
-        //     <section className="main">
-        //         <h1>Exhibitions Page</h1>
-        //     </section>
-        // </div>
-        <PageInDevelopment/>
+        <div>
+            <section className="main">
+                <h1>Exhibitions Page</h1>
+            </section>
+        </div>
+        // <PageInDevelopment/>
     )
 }
+
+export default ExhibitionsPage

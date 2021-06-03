@@ -1,11 +1,11 @@
 import React from "react"
 import {CarouselData} from "./CarouselData"
-import {CarouselBlock} from "./CarouselBlock"
+import CarouselBlock from "./CarouselBlock"
 
 import 'owl.carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 
-export const CarouselImage = ({slides}) => {
+function CarouselImage({slides}) {
 
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
@@ -64,3 +64,4 @@ export const CarouselImage = ({slides}) => {
     )
 }
 
+export default CarouselImage

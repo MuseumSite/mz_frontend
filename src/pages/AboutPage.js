@@ -1,8 +1,7 @@
 import React from "react"
-import {Header} from "../components/Header";
-import {PageInDevelopment} from "./PageInDevelopment";
+import PageInDevelopment from "./PageInDevelopment"
 
-export const AboutPage = () => {
+function AboutPage() {
     return (
         // <div>
         //     <Header/>
@@ -13,3 +12,5 @@ export const AboutPage = () => {
         <PageInDevelopment/>
     )
 }
+
+export default AboutPage

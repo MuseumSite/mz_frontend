@@ -1,8 +1,7 @@
 import React from "react"
-import {Header} from "../../components/Header";
-import {PageInDevelopment} from "../PageInDevelopment";
+import PageInDevelopment from "../PageInDevelopment"
 
-export const QuestsPage = () => {
+function QuestsPage() {
     return (
         // <div>
         //     <Header/>
@@ -13,3 +12,5 @@ export const QuestsPage = () => {
         <PageInDevelopment/>
     )
 }
+
+export default QuestsPage

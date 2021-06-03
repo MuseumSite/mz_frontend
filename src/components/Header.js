@@ -3,19 +3,19 @@ import {NavLink} from "react-router-dom"
 import logo from "../assets/img/Logo.png"
 import separator from "../assets/img/Separator.png"
 
-export const Header = () => {
+function Header () {
 
     return (
         <header>
             <nav className="navbar">
                 <ul className="navbar-nav container">
                     <li>
-                        <NavLink to="/home" id="header-logo">
+                        <NavLink to="/" id="header-logo">
                             <img src={logo} alt="logo"/>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/home">
+                        <NavLink to="/">
                             <span>Главная</span>
                             <img src={separator} alt="" className="separator"/>
                         </NavLink>
@@ -38,22 +38,22 @@ export const Header = () => {
                         </NavLink>
                         <ul className="navbar-nav-events">
                             <li className="nav-item-events">
-                                <NavLink to="/events/exhibitions">
+                                <NavLink to="/exhibitions">
                                     <span>Выставки</span>
                                 </NavLink>
                             </li>
                             <li className="nav-item-events">
-                                <NavLink to="/events/guided_tours">
+                                <NavLink to="/guided_tours">
                                     <span>Экскурсии</span>
                                 </NavLink>
                             </li>
                             <li className="nav-item-events">
-                                <NavLink to="/events/lessons">
+                                <NavLink to="/lessons">
                                     <span>Занятия</span>
                                 </NavLink>
                             </li>
                             <li className="nav-item-events">
-                                <NavLink to="/events/quests">
+                                <NavLink to="/quests">
                                     <span>Квесты</span>
                                 </NavLink>
                             </li>
@@ -76,5 +76,7 @@ export const Header = () => {
         </header>
     )
 }
+
+export default Header
 
 

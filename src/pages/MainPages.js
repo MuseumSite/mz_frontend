@@ -1,18 +1,41 @@
-import React from "react"
-import {Header} from "../components/Header"
-import {CarouselImage} from "../components/carousel/CarouselImage"
+import React, {useEffect} from "react"
+import CarouselImage from "../components/carousel/CarouselImage"
 import {CarouselData} from "../components/carousel/CarouselData"
-import {Footer} from "../components/Footer";
-import {ButtonMain} from "../components/ButtonMain";
-import {NewsBlock} from "../components/news/NewsBlock";
-import {NewsData} from "../components/news/NewsData";
+import Footer from "../components/Footer"
+import ButtonMain from "../components/ButtonMain"
+import NewsBlock from "../components/news/NewsBlock"
+import {NewsData} from "../components/news/NewsData"
 
-export const MainPage = () => {
-    const length = NewsData.length;
+function init() {
+    let myMap, myPlacemark
+
+    myMap = new ymaps.Map('map', {
+        center: [55.059327, 82.912475],
+        zoom: 12,
+        controls: ['smallMapDefaultSet']
+    }, {
+        searchControlProvider: 'yandex#search'
+    })
+
+    myPlacemark = new ymaps.Placemark([55.067455, 82.881920], {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+    }, {
+        preset: 'islands#darkGreenDotIcon',
+        iconImageSize: [35, 40],
+        iconImageOffset: [-5, -38]
+    })
+
+    myMap.geoObjects.add(myPlacemark)
+}
+
+function MainPage() {
+    useEffect(() => {
+        ymaps.ready(init)
+    }, [])
 
     return (
         <>
-            <Header/>
             <CarouselImage slides={CarouselData}/>
 
             <section className="about-block-wrapper">
@@ -45,6 +68,7 @@ export const MainPage = () => {
             <section className="map-block-wrapper">
                 <div className="container-second">
                     <div className="map-block-title">Интерактивная карта Заельцовского района</div>
+                    <div id="map"/>
                 </div>
             </section>
 
@@ -54,3 +78,4 @@ export const MainPage = () => {
     )
 }
 
+export default MainPage

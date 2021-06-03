@@ -1,7 +1,7 @@
 let path = require('path')
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -16,10 +16,13 @@ module.exports = {
         open: true,
         compress: true,
         hot: true,
-        port: 8080,
+        port: 8080
     },
     plugins: [
         new CleanWebpackPlugin(),
+        // new webpack.SourceMapDevToolPlugin({
+        //     filename: '[file].map'
+        // }),
         new HtmlWebpackPlugin({
             title: 'Museum',
             template: path.resolve(__dirname, './public/index.html'),
@@ -67,10 +70,12 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                use: [
+                    {
+                        loader: "babel-loader"
+                    }
+                ]
             }
         ]
     },
-};
+}

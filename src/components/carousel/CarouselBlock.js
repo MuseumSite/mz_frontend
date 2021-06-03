@@ -1,7 +1,7 @@
 import React from "react"
-import {ButtonMain} from "../ButtonMain";
+import ButtonMain from "../ButtonMain";
 
-export const CarouselBlock = ({title, date, description}) => {
+function CarouselBlock({title, date, description}) {
 
     return (
         <div className="carousel-block">
@@ -19,3 +19,4 @@ export const CarouselBlock = ({title, date, description}) => {
     )
 }
 
+export default CarouselBlock
