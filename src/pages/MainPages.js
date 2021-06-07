@@ -1,10 +1,12 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import CarouselImage from "../components/carousel/CarouselImage"
 import {CarouselData} from "../components/carousel/CarouselData"
 import Footer from "../components/Footer"
 import ButtonMain from "../components/ButtonMain"
 import NewsBlock from "../components/news/NewsBlock"
-import {NewsData} from "../components/news/NewsData"
+import useHttp from "../hooks/http.hook"
+import moment from "moment";
+import useMessage from "../hooks/message.hook";
 
 function init() {
     let myMap, myPlacemark
@@ -29,10 +31,40 @@ function init() {
     myMap.geoObjects.add(myPlacemark)
 }
 
+function formatDate(a, b) {
+    let c = Date(a.date_news)
+    let d = Date(b.date_news)
+    return c - d
+}
+
 function MainPage() {
+    const message = useMessage()
+    const [myData, setData] = useState([{title: "", description_news: "", img_path: "", date_news: ""}])
+    const {loading, request, error, clearError} = useHttp()
+
     useEffect(() => {
         ymaps.ready(init)
+        getData()
     }, [])
+
+    useEffect(() => {
+        message(error)
+        clearError()
+    }, [error, message, clearError])
+
+    async function getData() {
+        try {
+            let block = await request('http://127.0.0.1:5000/api/news/all')
+            let result = block.sort(function (a, b) {
+                let c = new Date(a.date_news)
+                let d = new Date(b.date_news)
+                return d - c
+            })
+            setData(result)
+        } catch (e) {
+
+        }
+    }
 
     return (
         <>
@@ -52,17 +84,18 @@ function MainPage() {
 
             <section className="news-block-wrapper container-second">
                 <div className="news-block-title">Новости</div>
-                {NewsData.map((newsItem, index) => {
+                {myData.map((newsItem, index) => {
                     return (
                         <NewsBlock
-                            img={newsItem.image}
+                            img={newsItem.img_path}
                             title={newsItem.title}
-                            description={newsItem.description}
-                            date={newsItem.date}
+                            description={newsItem.description_news}
+                            date={moment(newsItem.date_news).format('DD.MM.YY')}
                             key={index}
                         />
                     )
                 })}
+
             </section>
 
             <section className="map-block-wrapper">
