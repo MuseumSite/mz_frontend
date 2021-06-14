@@ -70,7 +70,7 @@ function Footer() {
                     <div className="footer-links-first-block">
 
                         <div className="contact-us">
-                            <NavLink to="/home">
+                            <NavLink to="/">
                                 <span>Свзязаться с нами</span>
                             </NavLink>
                         </div>
@@ -78,22 +78,22 @@ function Footer() {
                         <ul className="footer-links-ul">
 
                             <li className="footer-item">
-                                <NavLink to="/home">
+                                <NavLink to="/about">
                                     <span>О музее</span>
                                 </NavLink>
                             </li>
 
                             <li className="footer-item">
-                                <NavLink to="/">
+                                <NavLink to="/news">
                                     <span>Новости</span>
                                 </NavLink>
                             </li>
 
-                            <li className="footer-item">
-                                <NavLink to="/">
-                                    <span>События</span>
-                                </NavLink>
-                            </li>
+                            {/*<li className="footer-item">*/}
+                            {/*    <NavLink to="/">*/}
+                            {/*        <span>События</span>*/}
+                            {/*    </NavLink>*/}
+                            {/*</li>*/}
 
                             <li className="footer-item">
                                 <NavLink to="/">
@@ -108,7 +108,7 @@ function Footer() {
                             </li>
 
                             <li className="footer-item">
-                                <NavLink to="/">
+                                <NavLink to="/contacts">
                                     <span>Контакты</span>
                                 </NavLink>
                             </li>

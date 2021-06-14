@@ -20,9 +20,6 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        // new webpack.SourceMapDevToolPlugin({
-        //     filename: '[file].map'
-        // }),
         new HtmlWebpackPlugin({
             title: 'Museum',
             template: path.resolve(__dirname, './public/index.html'),
@@ -48,7 +45,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
                 loader: "file-loader",
                 options: {
                     name: 'assets/img/[name].[ext]'
@@ -61,7 +58,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: 'assets/fonts/[name].[ext]'

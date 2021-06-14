@@ -3,39 +3,11 @@ import CarouselImage from "../components/carousel/CarouselImage"
 import {CarouselData} from "../components/carousel/CarouselData"
 import Footer from "../components/Footer"
 import ButtonMain from "../components/ButtonMain"
-import NewsBlock from "../components/news/NewsBlock"
+import NewsBlock from "../components/NewsBlock"
 import useHttp from "../hooks/http.hook"
 import moment from "moment";
 import useMessage from "../hooks/message.hook";
-
-function init() {
-    let myMap, myPlacemark
-
-    myMap = new ymaps.Map('map', {
-        center: [55.059327, 82.912475],
-        zoom: 12,
-        controls: ['smallMapDefaultSet']
-    }, {
-        searchControlProvider: 'yandex#search'
-    })
-
-    myPlacemark = new ymaps.Placemark([55.067455, 82.881920], {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
-    }, {
-        preset: 'islands#darkGreenDotIcon',
-        iconImageSize: [35, 40],
-        iconImageOffset: [-5, -38]
-    })
-
-    myMap.geoObjects.add(myPlacemark)
-}
-
-function formatDate(a, b) {
-    let c = Date(a.date_news)
-    let d = Date(b.date_news)
-    return c - d
-}
+import Map from "../components/Map";
 
 function MainPage() {
     const message = useMessage()
@@ -43,7 +15,6 @@ function MainPage() {
     const {loading, request, error, clearError} = useHttp()
 
     useEffect(() => {
-        ymaps.ready(init)
         getData()
     }, [])
 
@@ -54,22 +25,20 @@ function MainPage() {
 
     async function getData() {
         try {
-            let block = await request('http://127.0.0.1:5000/api/news/all')
+            let block = await request('http://78.40.219.36:5000/api/news/all')
             let result = block.sort(function (a, b) {
                 let c = new Date(a.date_news)
                 let d = new Date(b.date_news)
                 return d - c
-            })
+            }).slice(0, 2)
             setData(result)
         } catch (e) {
-
         }
     }
 
     return (
         <>
             <CarouselImage slides={CarouselData}/>
-
             <section className="about-block-wrapper">
                 <div className="about-content container-second">
                     <h1>Ирина Валентиновна Чувилова кандидат исторических наук</h1>
@@ -81,7 +50,6 @@ function MainPage() {
                     <ButtonMain textBtn="О музее" link="/about"/>
                 </div>
             </section>
-
             <section className="news-block-wrapper container-second">
                 <div className="news-block-title">Новости</div>
                 {myData.map((newsItem, index) => {
@@ -90,23 +58,14 @@ function MainPage() {
                             img={newsItem.img_path}
                             title={newsItem.title}
                             description={newsItem.description_news}
-                            date={moment(newsItem.date_news).format('DD.MM.YY')}
+                            date={moment(newsItem.date_news).format('DD.MM.YYYY')}
                             key={index}
                         />
                     )
                 })}
-
             </section>
-
-            <section className="map-block-wrapper">
-                <div className="container-second">
-                    <div className="map-block-title">Интерактивная карта Заельцовского района</div>
-                    <div id="map"/>
-                </div>
-            </section>
-
+            <Map/>
             <Footer/>
-
         </>
     )
 }
